@@ -1,4 +1,5 @@
 #profile-title: Шумок Кирюха | Bypa$$
+#profile-description: Bypa$$ всех блокировок от РКН | By @noiserw
 #profile-update-interval: 1
 vless://00000000-0000-0000-0000-000000000000@0.0.0.0:1?security=none&type=tcp&headerType=none#⬇WI-FI СЕРВЕРА⬇
 vless://a29b529f-ef5d-4400-9d79-65f10ce033dd@155.117.137.104:443?security=reality&encryption=none&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&fp=firefox&sni=cdn4-35.yahoo.com&sid=e1d75c3d43f85999&spx=%2F&flow=xtls-rprx-vision&type=tcp&headerType=none#Казахстан №1 | Shumok
