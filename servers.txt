@@ -1,0 +1,7 @@
+#profile-title: Шумок Кирюха | Bypa$$
+vless://00000000-0000-0000-0000-000000000000@0.0.0.0:1?security=none&type=tcp&headerType=none#⬇WI-FI СЕРВЕРА⬇
+vless://a29b529f-ef5d-4400-9d79-65f10ce033dd@155.117.137.104:443?security=reality&encryption=none&pbk=CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw&fp=firefox&sni=cdn4-35.yahoo.com&sid=e1d75c3d43f85999&spx=%2F&flow=xtls-rprx-vision&type=tcp&headerType=none#Казахстан №1 | Shumok
+vless://6429d1d5-de69-4758-9046-e72861a40cb9@nlnode.kaguya.sbs:443?security=reality&encryption=none&pbk=zou0kbUyy7xxEi2HczjD33j3RWZ-kqxcQKHAU_lcNSE&fp=firefox&sni=nlnode.kaguya.sbs&flow=xtls-rprx-vision&type=tcp&headerType=none#Нидерланды №2 | Shumok
+vless://43df00c9-f209-4773-b1cc-48e175bfb606@dp-hu-01.live:443?security=reality&encryption=none&pbk=7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg&fp=firefox&sni=storage.yandex.net&sid=f4b4a6365558ea2e&flow=xtls-rprx-vision&type=tcp&headerType=none#Венгрия №3 | Shumok
+vless://6429d1d5-de69-4758-9046-e72861a40cb9@spa.sempai.site:443?security=reality&encryption=none&pbk=-CKku6lK0Q3xY8AeusATnAvXcW8ZJlquRTGn1MLHYSA&fp=chrome&sni=spa.sempai.site&flow=xtls-rprx-vision&type=tcp&headerType=none#Великобритания №4 | Shumok
+vless://6429d1d5-de69-4758-9046-e72861a40cb9@spa.sempai.site:443?security=reality&encryption=none&pbk=-CKku6lK0Q3xY8AeusATnAvXcW8ZJlquRTGn1MLHYSA&fp=chrome&sni=spa.sempai.site&flow=xtls-rprx-vision&type=tcp&headerType=none#Великобритания №5 | Shumok
