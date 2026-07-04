@@ -1,173 +1,214 @@
-[
-  {
-    "protocol": "vless",
-    "address": "n2latv.usractivity-metrics.digital",
-    "port": 443,
-    "id": "583579d7-be98-4f7e-a176-bc407ce14934",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "n2latv.usractivity-metrics.digital",
-      "fingerprint": "firefox"
+{
+    "dns": {
+        "queryStrategy": "UseIP",
+        "servers": [
+            "1.1.1.1",
+            "1.0.0.1"
+        ]
     },
-    "wsSettings": {
-      "path": "/media/ws/"
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            },
+            "sniffing": {
+                "destOverride": ["http", "tls", "quic"],
+                "enabled": true
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "allowTransparent": false
+            },
+            "tag": "http"
+        }
+    ],
+    "log": {
+        "loglevel": "warning"
     },
-    "tag": "Латвия №1"
-  },
-  {
-    "protocol": "vless",
-    "address": "fr.good-server-list.life",
-    "port": 8443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "fr.good-server-list.life",
-      "fingerprint": "firefox"
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "n2latv.usractivity-metrics.digital",
+                    "port": 443,
+                    "users": [{"encryption": "none", "flow": "", "id": "583579d7-be98-4f7e-a176-bc407ce14934"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "n2latv.usractivity-metrics.digital"},
+                "wsSettings": {"headers": {"Host": ""}, "path": "/media/ws/"}
+            },
+            "tag": "Латвия №1"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "fr.good-server-list.life",
+                    "port": 8443,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "fr.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "fr.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Франция №2"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "deinst.good-server-list.life",
+                    "port": 8443,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "deinst.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "deinst.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Германия Нейросети №3"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "uk.good-server-list.life",
+                    "port": 443,
+                    "users": [{"encryption": "none", "flow": "xtls-rprx-vision", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "fingerprint": "firefox",
+                    "publicKey": "H46I56wuurV9oQyn2irq5ZleWz_FBpHWmWoqz1Hc-Qc",
+                    "serverName": "eh.vk.com",
+                    "shortId": "53c8004fa34e8724"
+                }
+            },
+            "tag": "Великобритания №4"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "de-test.good-server-list.life",
+                    "port": 8443,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "de-test.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "de-test.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Германия TikTok №5"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "de.good-server-list.life",
+                    "port": 443,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "de.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "de.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Германия №6"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "swi.good-server-list.life",
+                    "port": 443,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "chrome", "serverName": "swi.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "swi.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Швейцария №7"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "84.201.131.237",
+                    "port": 443,
+                    "users": [{"encryption": "none", "flow": "xtls-rprx-vision", "id": "583579d7-be98-0002-a176-bc407ce14934"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "fingerprint": "chrome",
+                    "publicKey": "sTcW5MUl06ntawTcPTOysKh0PC8aWFgSNG0pGx2rTn8",
+                    "serverName": "yandex.ru",
+                    "shortId": "ed731b9c3d12b9bb"
+                }
+            },
+            "tag": "Евросоюз №8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [{
+                    "address": "ru.good-server-list.life",
+                    "port": 5497,
+                    "users": [{"encryption": "none", "flow": "", "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea"}]
+                }]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {"fingerprint": "firefox", "serverName": "ru.good-server-list.life"},
+                "wsSettings": {"headers": {"Host": "ru.good-server-list.life"}, "path": "/vless"}
+            },
+            "tag": "Россия Ютуб"
+        },
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ],
+    "remarks": "Кирюша Випиэн | Все серверы",
+    "routing": {
+        "domainStrategy": "IPIfNonMatch",
+        "rules": []
     },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "fr.good-server-list.life"
-      }
-    },
-    "tag": "Франция №2"
-  },
-  {
-    "protocol": "vless",
-    "address": "deinst.good-server-list.life",
-    "port": 8443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "deinst.good-server-list.life",
-      "fingerprint": "firefox"
-    },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "deinst.good-server-list.life"
-      }
-    },
-    "tag": "Германия Нейросети №3"
-  },
-  {
-    "protocol": "vless",
-    "address": "uk.good-server-list.life",
-    "port": 443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "flow": "xtls-rprx-vision",
-    "network": "tcp",
-    "security": "reality",
-    "realitySettings": {
-      "serverName": "eh.vk.com",
-      "fingerprint": "firefox",
-      "publicKey": "H46I56wuurV9oQyn2irq5ZleWz_FBpHWmWoqz1Hc-Qc",
-      "shortId": "53c8004fa34e8724"
-    },
-    "tag": "Великобритания №4"
-  },
-  {
-    "protocol": "vless",
-    "address": "de-test.good-server-list.life",
-    "port": 8443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "de-test.good-server-list.life",
-      "fingerprint": "firefox"
-    },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "de-test.good-server-list.life"
-      }
-    },
-    "tag": "Германия(TikTok) №5"
-  },
-  {
-    "protocol": "vless",
-    "address": "de.good-server-list.life",
-    "port": 443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "de.good-server-list.life",
-      "fingerprint": "firefox"
-    },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "de.good-server-list.life"
-      }
-    },
-    "tag": "Германия №6"
-  },
-  {
-    "protocol": "vless",
-    "address": "swi.good-server-list.life",
-    "port": 443,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "swi.good-server-list.life",
-      "fingerprint": "chrome"
-    },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "swi.good-server-list.life"
-      }
-    },
-    "tag": "Швейцария №7"
-  },
-  {
-    "protocol": "vless",
-    "address": "84.201.131.237",
-    "port": 443,
-    "id": "583579d7-be98-0002-a176-bc407ce14934",
-    "encryption": "none",
-    "flow": "xtls-rprx-vision",
-    "network": "tcp",
-    "security": "reality",
-    "realitySettings": {
-      "serverName": "yandex.ru",
-      "fingerprint": "chrome",
-      "publicKey": "sTcW5MUl06ntawTcPTOysKh0PC8aWFgSNG0pGx2rTn8",
-      "shortId": "ed731b9c3d12b9bb"
-    },
-    "tag": "Евросоюз №8"
-  },
-  {
-    "protocol": "vless",
-    "address": "ru.good-server-list.life",
-    "port": 5497,
-    "id": "b1dd823e-0430-4c5e-a2b3-7ccb5d3998ea",
-    "encryption": "none",
-    "network": "ws",
-    "security": "tls",
-    "tlsSettings": {
-      "serverName": "ru.good-server-list.life",
-      "fingerprint": "firefox"
-    },
-    "wsSettings": {
-      "path": "/vless",
-      "headers": {
-        "Host": "ru.good-server-list.life"
-      }
-    },
-    "tag": "Россия Ютуб"
-  }
-]
+    "stats": {}
+}
