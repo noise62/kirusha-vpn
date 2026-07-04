@@ -1,4 +1,4 @@
-#profile-title: Шумок Кирюха | Bypa$$
+#profile-title: Woqued VPN | Best solution
 #profile-description: Bypa$$ всех блокировок от РКН | By @noiserw
 #profile-update-interval: 1
 vless://00000000-0000-0000-0000-000000000000@0.0.0.0:1?security=none&type=tcp&headerType=none#⬇WI-FI СЕРВЕРА⬇
