@@ -52,6 +52,168 @@
             "settings": {
                 "vnext": [
                     {
+                        "address": "head-shot-play.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "id": "5c319d7f-7a74-4c77-b887-9af83ace5e4d"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "security": "tls",
+                "tlsSettings": {
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "edge",
+                    "serverName": "head-shot-play.com"
+                },
+                "xhttpSettings": {
+                    "extra": {
+                        "path": "/api/uploadFile/",
+                        "seqKey": "chunk_id",
+                        "seqPlacement": "query",
+                        "sessionKey": "X-Upload-Token",
+                        "sessionPlacement": "header",
+                        "uplinkHTTPMethod": "GET",
+                        "xPaddingHeader": "X-Client-Version",
+                        "xPaddingKey": "hash",
+                        "xPaddingMethod": "tokenish",
+                        "xPaddingObfsMode": true,
+                        "xPaddingPlacement": "queryInHeader",
+                        "xmux": {
+                            "cMaxLifetimeMs": 300000,
+                            "cMaxReuseTimes": 100,
+                            "maxConcurrency": "16-32",
+                            "maxConnections": 0
+                        }
+                    },
+                    "host": "head-shot-play.com",
+                    "mode": "packet-up",
+                    "path": "/api/uploadFile/"
+                }
+            },
+            "tag": "node-head-shot"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "1-node-soda.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "id": "5c319d7f-7a74-4c77-b887-9af83ace5e4d"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "security": "tls",
+                "tlsSettings": {
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "edge",
+                    "serverName": "1-node-soda.com"
+                },
+                "xhttpSettings": {
+                    "extra": {
+                        "path": "/api/uploadFile/",
+                        "seqKey": "chunk_id",
+                        "seqPlacement": "query",
+                        "sessionKey": "X-Upload-Token",
+                        "sessionPlacement": "header",
+                        "uplinkHTTPMethod": "GET",
+                        "xPaddingHeader": "X-Client-Version",
+                        "xPaddingKey": "hash",
+                        "xPaddingMethod": "tokenish",
+                        "xPaddingObfsMode": true,
+                        "xPaddingPlacement": "queryInHeader",
+                        "xmux": {
+                            "cMaxLifetimeMs": 300000,
+                            "cMaxReuseTimes": 100,
+                            "maxConcurrency": "16-32",
+                            "maxConnections": 0
+                        }
+                    },
+                    "host": "1-node-soda.com",
+                    "mode": "packet-up",
+                    "path": "/api/uploadFile/"
+                }
+            },
+            "tag": "node-soda-1"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "2-node-soda.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "id": "5c319d7f-7a74-4c77-b887-9af83ace5e4d"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "security": "tls",
+                "tlsSettings": {
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "edge",
+                    "serverName": "2-node-soda.com"
+                },
+                "xhttpSettings": {
+                    "extra": {
+                        "path": "/api/uploadFile/",
+                        "seqKey": "chunk_id",
+                        "seqPlacement": "query",
+                        "sessionKey": "X-Upload-Token",
+                        "sessionPlacement": "header",
+                        "uplinkHTTPMethod": "GET",
+                        "xPaddingHeader": "X-Client-Version",
+                        "xPaddingKey": "hash",
+                        "xPaddingMethod": "tokenish",
+                        "xPaddingObfsMode": true,
+                        "xPaddingPlacement": "queryInHeader",
+                        "xmux": {
+                            "cMaxLifetimeMs": 300000,
+                            "cMaxReuseTimes": 100,
+                            "maxConcurrency": "16-32",
+                            "maxConnections": 0
+                        }
+                    },
+                    "host": "2-node-soda.com",
+                    "mode": "packet-up",
+                    "path": "/api/uploadFile/"
+                }
+            },
+            "tag": "node-soda-2"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
                         "address": "ya.sellerdashboard.ru",
                         "port": 443,
                         "users": [
@@ -106,7 +268,7 @@
                     "path": "/db/"
                 }
             },
-            "tag": "CDYANDEXN"
+            "tag": "CDYANDEXN-1"
         },
         {
             "protocol": "vless",
@@ -440,17 +602,25 @@
             "tag": "block"
         }
     ],
-    "remarks": "Обход Глушилок",
+    "remarks": "Обход Глушилок АВТОВЫБОР",
     "routing": {
         "balancers": [
             {
                 "selector": [
-                    "CDYANDEXN"
+                    "node-head-shot",
+                    "node-soda-1",
+                    "node-soda-2",
+                    "CDYANDEXN-1",
+                    "CDYANDEXN-2",
+                    "CDYANDEXN-3",
+                    "CDYANDEXN-4",
+                    "CDYANDEXN-5",
+                    "CDYANDEXN-6"
                 ],
                 "strategy": {
-                    "type": "random"
+                    "type": "leastPing"
                 },
-                "tag": "Super_Balancer"
+                "tag": "Smart_Balancer"
             }
         ],
         "domainMatcher": "hybrid",
@@ -1165,7 +1335,7 @@
                 "type": "field"
             },
             {
-                "balancerTag": "Super_Balancer",
+                "balancerTag": "Smart_Balancer",
                 "inboundTag": [
                     "socks",
                     "http"
